@@ -68,9 +68,6 @@ REST_FRAMEWORK = {
 }
 
 
-# AUTHENTICATION_BACKENDS = (
-#     'django.contrib.auth.backends.ModelBackend',
-# )
 AUTHENTICATION_BACKENDS = (
     # 'users_mod.backends.EmailBackend',  # Use your custom authentication backend
     # 'allauth.account.auth_backends.AuthenticationBackend',
