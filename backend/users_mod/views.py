@@ -15,6 +15,7 @@ class UserRegisterView(APIView):
             user = serializer.save()
 
             context = {
+                "id": serializer.data['id'],
                 "email": serializer.data['email'],
                 "message": "Account Created."
             }

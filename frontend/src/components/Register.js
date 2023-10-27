@@ -1,9 +1,9 @@
+// src/components/Register.js
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SETTINGS } from '../Constants';
 
-
-function Login() {
+function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${SETTINGS.API_BASE_URL}/users/login/`, {
+      const response = await fetch('http://localhost:8000/users/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -20,14 +20,15 @@ function Login() {
         body: JSON.stringify({ email, password }),
       });
       const data = await response.json();
-      if (data.tokens) {
-        localStorage.setItem('accessToken', data.tokens.access);
-        navigate('/');
+      if (data.id) {
+        navigate('/login');
       } else {
-        setError('Login Failed: ' + data.detail)
+        console.log('error: '+ data)
+        const err_msgs = Object.values(data)
+        setError('Registration Failed: ' + err_msgs.join(" "));
       }
     } catch (error) {
-      setError('An Error occurred: ' + error.message)
+      setError('An error occurred: ' + error.message);
     }
   };
 
@@ -35,8 +36,8 @@ function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
       <header className="mb-4 text-center">
-          <h1 className="text-2xl font-bold">Login</h1>
-          <p>Enter your email and password to login.</p>
+          <h1 className="text-2xl font-bold">Create Account</h1>
+          <p>Enter your email and password to create an account.</p>
         </header>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <input type="hidden" name="remember" value="true" />
@@ -80,7 +81,7 @@ function Login() {
               type="submit"
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              LogIn
+              Register
             </button>
             {error && <p className="text-red-500 mt-4">{error}</p>}
           </div>
@@ -90,4 +91,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
