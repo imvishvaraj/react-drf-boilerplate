@@ -152,7 +152,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-AUTH_USER_MODEL = 'users_mod.CustomUser'  # Point to your custom user model
+AUTH_USER_MODEL = 'users_mod.UserAccount'  # Point to your custom user model
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Use console backend for simplicity in development
 
 
