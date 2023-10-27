@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ function Login() {
       const data = await response.json();
       if (data.tokens) {
         localStorage.setItem('accessToken', data.tokens.access);
-        history.push('/user-details');
+        navigate('/user-details');
       } else {
         console.error('Login failed');
       }
