@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yu*5*2l%mt5yd!smh)h55z)4sf2_6afwg#7$8)_bdpjb#z*yyz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'https://react-drf-bda6fc398973.herokuapp.com']
 
 
 # Application definition
@@ -171,5 +171,5 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8080",
-    "http://127.0.0.1:9000",
+    "https://react-drf-bda6fc398973.herokuapp.com",
 ]
