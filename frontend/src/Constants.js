@@ -2,6 +2,6 @@
 
 export const SETTINGS = {
     "SITE_NAME": "React DRF",
-    "API_BASE_URL": "https://react-drf-bda6fc398973.herokuapp.com"
+    "API_BASE_URL": "http://localhost:8000"
 }
 

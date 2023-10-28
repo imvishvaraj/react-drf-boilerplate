@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yu*5*2l%mt5yd!smh)h55z)4sf2_6afwg#7$8)_bdpjb#z*yyz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://react-drf-bda6fc398973.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'https://react-drf-boilerplate.netlify.app']
 
 
 # Application definition
@@ -170,6 +170,7 @@ SIMPLE_JWT = {
 # CORS conf
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://localhost:8080",
-    "https://react-drf-bda6fc398973.herokuapp.com",
+    "http://localhost:8000",
+    "https://react-drf-boilerplate.netlify.app"
 ]
+# CORS_ALLOW_ALL_ORIGINS = True
