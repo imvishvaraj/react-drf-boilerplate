@@ -24,7 +24,7 @@ In the case you separate repositories for backend frontend respective directory 
 - [x] Add Navigation and Footer for all pages
 - [x] Show error messages on Login, Registration Pages
 - [x] Deploy Fronend
-- [x] Deploy Backend
+- [ ] Deploy Backend
 - [ ] Remove unwanted packages from frontend, backend
 - [ ] Add .env file configuration
 - [ ] Update docker compose for environment variables
