@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yu*5*2l%mt5yd!smh)h55z)4sf2_6afwg#7$8)_bdpjb#z*yyz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://react-drf-boilerplate.netlify.app']
+ALLOWED_HOSTS = ['localhost', 'https://react-drf-boilerplate.netlify.app', "192.168.0.100"]
 
 
 # Application definition

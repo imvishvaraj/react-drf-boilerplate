@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.simple import redirect_to
+# from django.views.generic.simple import redirect_to
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('users/', include('users_mod.urls')),
-    path('', redirect_to, {'url': 'https://react-drf-boilerplate.netlify.app'}),
+    # path('', redirect_to, {'url': 'https://react-drf-boilerplate.netlify.app'}),
 ]
