@@ -10,6 +10,10 @@ services:
       - "${BACKEND_DEBUG_PORT:-5678}:5678"
     environment:
       - DJANGO_DEBUG=true
+      - BACKEND_PORT=${BACKEND_PORT}
+      - BACKEND_DEBUG_PORT=${BACKEND_DEBUG_PORT}
+      - BACKEND_ALLOWED_HOSTS=${BACKEND_ALLOWED_HOSTS}
+      - BACKEND_CORS=${BACKEND_CORS}
 
   frontend:
     build:
@@ -17,3 +21,6 @@ services:
       dockerfile: Dockerfile-Frontend
     ports:
       - "${FRONTEND_PORT:-3000}:3000"
+    environment:
+      - FRONTEND_PORT=${FRONTEND_PORT}
+      - FRONTEND_API_BASE_URL=${FRONTEND_API_BASE_URL}
