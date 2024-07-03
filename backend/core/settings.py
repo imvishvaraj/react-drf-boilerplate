@@ -169,9 +169,5 @@ SIMPLE_JWT = {
 }
 
 # CORS conf
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "https://react-drf-boilerplate.netlify.app"
-]
+CORS_ALLOWED_ORIGINS = os.getenv('BACKEND_ALLOWED_HOSTS', '').split(',')
 # CORS_ALLOW_ALL_ORIGINS = True
