@@ -169,5 +169,5 @@ SIMPLE_JWT = {
 }
 
 # CORS conf
-CORS_ALLOWED_ORIGINS = os.getenv('BACKEND_CORS', '').split(',')
-# CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOWED_ORIGINS = os.getenv('BACKEND_CORS', '*').split(',')
+CORS_ALLOW_ALL_ORIGINS = True
