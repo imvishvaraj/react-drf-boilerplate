@@ -169,10 +169,10 @@ SIMPLE_JWT = {
 }
 
 # CORS conf
-# CORS_ALLOWED_ORIGINS = os.getenv('BACKEND_CORS', '*').split(',')
-CORS_ALLOWED_ORIGINS = [
-    "https://drf-auth-demo.apps.vishvaraj.me",
-    "https://react-drf-ui.apps.vishvaraj.me",
-    "https://*.apps.vishvaraj.me"
-]
+CORS_ALLOWED_ORIGINS = ["*"]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://drf-auth-demo.apps.vishvaraj.me",
+#     "https://react-drf-ui.apps.vishvaraj.me",
+#     "https://*.apps.vishvaraj.me"
+# ]
 CORS_ALLOW_ALL_ORIGINS = True
