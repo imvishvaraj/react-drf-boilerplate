@@ -1,10 +1,5 @@
 FROM python:3.12-bullseye
 
-ARG BACKEND_PORT
-ARG BACKEND_DEBUG_PORT
-ARG BACKEND_ALLOWED_HOSTS
-ARG BACKEND_CORS
-
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -21,8 +16,8 @@ RUN pip install -r requirements.txt
 
 
 # Expose the port the app runs on
-EXPOSE $BACKEND_PORT
-EXPOSE $BACKEND_DEBUG_PORT
+EXPOSE 8000
+EXPOSE 5678
 
 # Command to run the application
 CMD ["sh", "start_app.sh"]
