@@ -51,7 +51,7 @@ EXTERNAL_APP = [
 INSTALLED_APPS += EXTERNAL_APP
 
 MIDDLEWARE = [
-    'core.middleware.LogRequestMiddleware',
+    'core.log_middleware.LogRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
