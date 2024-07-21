@@ -1,1 +1,1 @@
-serve -s build -l ${FRONTEND_PORT:-3000}
+serve -s build -l tcp://0.0.0.0:${FRONTEND_PORT:-3000}
