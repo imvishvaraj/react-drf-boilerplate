@@ -1,0 +1,1 @@
+serve -s build -l ${FRONTEND_PORT:-3000}
