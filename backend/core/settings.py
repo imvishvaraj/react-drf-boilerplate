@@ -179,8 +179,7 @@ SIMPLE_JWT = {
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "https://react-drf-ui.apps.vishvaraj.me",
-    "https://drf-auth-demo.apps.vishvaraj.me",
+    "*"
 ]
 
 CORS_ALLOW_METHODS = [
