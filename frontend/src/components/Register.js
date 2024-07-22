@@ -17,7 +17,7 @@ function Register() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://react-drf-ui.apps.vishvaraj.me',
+          // 'Access-Control-Allow-Origin': 'https://react-drf-ui.apps.vishvaraj.me',
         },
         body: JSON.stringify({ email, password }),
       });
